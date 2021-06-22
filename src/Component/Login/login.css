@@ -1,0 +1,9 @@
+.loginContainer{
+    border-radius: 20px;
+    background-color: lightgray;
+    margin-top: 200px;
+}
+.btn-google{
+    width: 400px;
+    border-radius: 200px;
+}

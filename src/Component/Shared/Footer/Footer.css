@@ -1,0 +1,14 @@
+.footerContainer{
+    background-color: #010516;
+}
+.footer{
+    border-bottom: 1px solid white;
+}
+.socialMedia .icon{
+    height: 60px;
+    width: 60px;
+    color: #ffffff;
+    border-radius: 50%;
+    border: 1px solid #6ACECE;
+    padding: 10px
+}

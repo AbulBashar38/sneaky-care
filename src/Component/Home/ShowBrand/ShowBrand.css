@@ -1,0 +1,13 @@
+.brand-card-style{
+    width: 18rem;
+}
+
+@media screen and (max-width: 480px) {
+    .brand-card-style img{
+        height: 100px !important;
+        width: 200px;
+    }
+    .brand-card-style{
+        width: 14rem;
+    }
+}

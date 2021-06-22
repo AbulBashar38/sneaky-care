@@ -1,0 +1,18 @@
+.contact-container{
+    position: relative; 
+    height: 650px;
+    width: 100%;
+    height: 800px;
+}
+.contact-container::before {    
+    content: "";
+    background-image: url('../../../image/NapkinBg2.jpg');
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.3;
+    z-index: -1;
+}

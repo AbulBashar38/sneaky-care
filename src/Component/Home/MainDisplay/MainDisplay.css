@@ -1,0 +1,13 @@
+
+@media screen and (max-width: 480px) {
+    .bannerImg img{
+        width: 400px;
+        height: 200px !important
+    }
+    .bannerImg{
+        margin-top: 50px;
+    }
+    .home-text{
+        text-align: center;
+    }
+  }

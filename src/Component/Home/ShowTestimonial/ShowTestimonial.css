@@ -1,0 +1,8 @@
+.testimonial-card{
+    width: 18rem;
+}
+@media screen and (max-width: 480px) {
+    .testimonial-card{
+        width: 14rem;
+    }
+}

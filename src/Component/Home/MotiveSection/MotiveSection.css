@@ -1,0 +1,8 @@
+@media screen and (max-width: 480px) {
+    .motiveImg img{
+        height: 300px !important
+    }
+    .motiveImg{
+        margin-bottom: 50px;
+    }
+}

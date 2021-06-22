@@ -1,0 +1,27 @@
+.card-style{
+    width: 18rem;
+}
+.card-style img{
+    width: 250px;
+}
+.hover-style{
+    font-size: 25px;
+    transition: font-size 1s;
+
+}
+.hover-style:hover{
+    font-size: 30px 
+}
+@media screen and (max-width: 480px) {
+    .card-style{
+        width: 14rem;
+    }
+    .card-style img{
+        width: 200px !important
+    }
+    .card-container{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+}

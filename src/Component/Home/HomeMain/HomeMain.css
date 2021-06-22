@@ -1,0 +1,31 @@
+.homeMain{
+    position: relative; 
+    height: 650px;
+    width: 100%;
+}
+.homeMain::before {    
+    content: "";
+    background-image: url('../../../image/homeBanner.jpg');
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.2;
+    z-index: -1;
+}
+.text-color{
+    color: #030e44 !important;
+}
+.text-color2{
+    color: #cb0b82 !important;
+}
+.btn-custom{
+    background-color: #061250;
+    color: white;
+}
+.btn-custom:hover{
+    color: white;
+    background-color: #131f5c;
+}
