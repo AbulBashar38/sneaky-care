@@ -1,4 +1,56 @@
 .sidebar{
     background-color: #010829;
     position: fixed;
+    height: 100vh;
+    /* overflow: scroll; */
+    transition: all 0.5s ease;
+    z-index: 100;
+}
+.active{
+    color: green;
+}
+.font-icon{
+    font-size: 20px;
+    margin-right: 10px;
+}
+.sidebar ul li:hover{
+    background-color: #111944;
+    padding: 10px;
+    border-radius: 20px;
+    transition: all 0.4s ease;
+    text-align: center;
+}
+.sidebar ul{
+    position: relative;
+}
+.logo-container{
+    display: flex;
+    position: relative;
+    bottom: 1.5rem;
+    height: 50px;
+    width: 100%;
+    transition: all 0.5s ease;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+#menuBtn{
+    cursor: pointer;
+}
+.toltip{
+    background: white;
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+    position: absolute;
+    left: 60px;
+    box-shadow: 2px 3px 8px lightgray;
+    display: none;
+}
+.sidebar ul li:hover .toltip{
+    display: block;
+
+}
+.logOut:hover .toltip{
+    display: block;
 }

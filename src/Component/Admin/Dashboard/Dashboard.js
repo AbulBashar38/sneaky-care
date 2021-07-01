@@ -3,7 +3,7 @@ import { UserContext } from '../../../App';
 import Sidebar from '../../Sidebar/Sidebar';
 import ShowAppointment from '../ShowAppointment/ShowAppointment';
 import ShowOrder from '../showOrder/ShowOrder';
-
+import'./Dashboard.css'
 const Dashboard = () => {
     const [allOrders,setAllOrders]=useState([])
     const [allAppointments,setAllAppointments]=useState([])
@@ -23,7 +23,7 @@ const Dashboard = () => {
             <div className="col-md-2">
                 <Sidebar></Sidebar>
             </div>
-            <div className="col-md-10">
+            <div className="col-md-10 p-5">
                 <div className="display-6 text-center mb-5">Your Order and Appointment</div>
                 <div className="row">
                     {
