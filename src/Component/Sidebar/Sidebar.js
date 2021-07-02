@@ -16,6 +16,10 @@ const Sidebar = () => {
     const style ={
         border:'5px solid red'
     }
+    const handleLogout =()=>{
+
+        setLoggedInUser({})
+    }
     return (
         <div className='sidebar' style={openBar?{width: '200px',overflow:'scroll'}:{width:'70px'}}>
             <div className='d-flex flex-column justify-content-between py-5 px-3 text-white text-center' style={{height: '100vh'}}>
@@ -83,7 +87,9 @@ const Sidebar = () => {
 
                 </ul>
                 <div className='mb-5 logOut'>
-                    <Link to='/' className='text-white'><FontAwesomeIcon className='font-icon' icon={faSignOutAlt} /><span style={openBar===false?{display:'none'}:{display:'block'}}> Log out</span></Link>
+                    <Link onClick={handleLogout} to='/' className='text-white'>
+                        <FontAwesomeIcon className='font-icon' icon={faSignOutAlt} /><span style={openBar===false?{display:'none'}:{display:'block'}}> Log out</span>
+                        </Link>
                     <span className='toltip' style={openBar?{display:'none'}:{}} >LogOut</span>
                 </div>
             </div>
