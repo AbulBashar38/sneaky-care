@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { UserContext } from '../../../App';
 import Header from '../../Shared/Header/Header';
 import { useForm } from "react-hook-form";
-
+import './Checkout.css'
 const Checkout = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext)
     const [orderedItem, setOrderedItem] = useState({})
@@ -26,8 +26,8 @@ const Checkout = () => {
         <div>
             <Header></Header>
             <div className='container'>
-                <div className="p-5 m-5">
-                    <form className='p-3 shadow-lg' style={{ backgroundColor: 'white', borderRadius: '20px' }} onSubmit={handleSubmit(onSubmit)}>
+                <div className="checkout-container">
+                    <form className='shadow-lg p-3' style={{ backgroundColor: 'white', borderRadius: '20px' }} onSubmit={handleSubmit(onSubmit)}>
                         <p className='display-6 text-center text-color'>Confirm Your Order</p>
                         <div className="mb-3">
                             <label htmlFor="exampleInputEmail1" className="form-label fw-bold text-color">Your Name</label>
