@@ -3,6 +3,7 @@
 
 #### This website is basically made for rural woman. village girls and woman can't buy sanitary napkin or pad easily. so the can buy pad and take appointment from great gynecologist of bangladesh. in the home page you can see main home banner,motive section,services,brands section, doctors,testimonial,contact,footer,
 
+# Features
 ## Home page
 #### You can Easily go to the shop page and also Appointment page.
 ![Home page](./src/image/home.png)
