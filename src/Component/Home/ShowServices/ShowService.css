@@ -25,3 +25,10 @@
         margin-bottom: 30px;
     }
 }
+@media screen and (max-width: 767px){
+    .card-container{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+}

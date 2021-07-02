@@ -1,0 +1,16 @@
+.admin-card{
+    width: 18rem;
+}
+.admin-card img {
+    height: 100px;
+}
+@media screen and (max-width: 767px){
+    .admin-card{
+        width: 14rem;
+    }
+}
+@media screen and (max-width: 480px){
+    .admin-card{
+        width: 12rem;
+    }
+}

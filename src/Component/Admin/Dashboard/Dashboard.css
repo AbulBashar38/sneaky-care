@@ -1,3 +1,16 @@
 *{
-    /* box-sizing: border-box; */
+    box-sizing: border-box;
+}
+@media screen and (max-width: 767px) {
+    .dashboard-items{
+        width: calc(100% - 70px);
+        position: absolute;
+        left: 70px;
+        top: 0;
+    }
+}
+@media screen and (max-width: 480px) {
+    .dashboard-items{
+        width: auto;
+    }
 }
