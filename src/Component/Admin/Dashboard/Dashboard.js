@@ -24,7 +24,7 @@ const Dashboard = () => {
                 <Sidebar></Sidebar>
             </div>
             <div className="col-md-10">
-                <div className='dashboard-items py-5'>
+                <div className='main-items py-5'>
                     <div>
                         <div className="display-6 text-center mb-5">Your Order and Appointment</div>
                         <div className="row">

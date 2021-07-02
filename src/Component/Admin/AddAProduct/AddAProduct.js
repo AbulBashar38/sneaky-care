@@ -37,23 +37,23 @@ const AddAProduct = () => {
         e.preventDefault()
     }
     return (
-        <form className='p-5 shadow-lg mx-5' style={{ backgroundColor: 'white', borderRadius: '20px' }}>
+        <form className='shadow-lg p-3'>
             <p className='display-6 text-center text-color'>Add new product</p>
             <div className="mb-3">
                 <label htmlFor="exampleInputEmail1" className="form-label fw-bold text-color">Product Name</label>
-                <input type="text" className="form-control" id="exampleInputEmail1" onBlur={handleBlur} name='name' />
+                <input type="text" className="form-control" id="exampleInputEmail1" onBlur={handleBlur} name='name' required/>
             </div>
             <div className="mb-3">
                 <label htmlFor="priceInput" className="form-label fw-bold text-color">Price</label>
-                <input type="text" className="form-control" id="priceInput" onBlur={handleBlur} name='price' />
+                <input type="text" className="form-control" id="priceInput" onBlur={handleBlur} name='price' required/>
             </div>
             <div className="mb-3">
                 <label htmlFor="priceText" className="form-label fw-bold text-color">Brand name</label>
-                <input type="text" className="form-control" id="priceText" onBlur={handleBlur} name='brand' />
+                <input type="text" className="form-control" id="priceText" onBlur={handleBlur} name='brand' required/>
             </div>
             <div className="mb-3">
                 <label htmlFor="formFile" className="form-label fw-bold text-color">Add product Image</label>
-                <input className="form-control" type="file" id="formFile" onChange={UploadInImgbb} />
+                <input className="form-control" type="file" id="formFile" onChange={UploadInImgbb} required/>
             </div>
             <div className="text-center">
                 <button type="submit" onClick={addProductDatabase} className="btn btn-custom">Add product</button>

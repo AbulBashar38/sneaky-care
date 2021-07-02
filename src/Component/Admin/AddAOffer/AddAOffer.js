@@ -2,7 +2,7 @@ import React from 'react';
 
 const AddAOffer = () => {
     return (
-        <form className='p-3 shadow-lg' style={{ backgroundColor: 'white', borderRadius: '20px' }}>
+        <form className='p-3 shadow-lg' style={{width:''}}>
             <p className='display-6 text-center text-color'>Currently Disabled</p>
             <div className="mb-3">
                 <label htmlFor="exampleInputEmail1" className="form-label fw-bold">offer title</label>

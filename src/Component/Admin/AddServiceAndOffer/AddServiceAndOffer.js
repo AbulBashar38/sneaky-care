@@ -6,19 +6,19 @@ import AddAService from '../AddAService/AddAService';
 
 const AddServiceAndOffer = () => {
     return (
-        <div className='row' style={{backgroundColor:'#fff1fa',height:'900px'}}>
+        <div className='row'>
             <div className="col-md-2">
                 <Sidebar></Sidebar>
             </div>
             <div className="col-md-10">
-                <div className="row">
-                    <div className="col-md-6 p-5">
+                <div className="row main-items">
+                    <div className="col-md-4 col-sm-6 mb-4">
                         <AddAService></AddAService>
                     </div>
-                    <div className="col-md-6 p-5">
+                    <div className="col-md-4 col-sm-6 mb-4">
                         <AddAOffer></AddAOffer>
                     </div>
-                    <div className='mx-5'>
+                    <div className='col-md-4 col-sm-6 mb-4'>
                         <AddAProduct></AddAProduct>
                     </div>
                 </div>

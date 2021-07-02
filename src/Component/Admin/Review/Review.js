@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { UserContext } from '../../../App';
 import Sidebar from '../../Sidebar/Sidebar'
+import './Review.css'
 const Review = () => {
     const [loggedInUser,setLoggedInUser]=useContext(UserContext)
     const [testimonial, setTestimonial] = useState({})
@@ -26,7 +27,7 @@ const Review = () => {
                 <Sidebar></Sidebar>
             </div>
             <div className="col-md-10">
-                <div className="p-5 m-5">
+                <div className="main-items review-container">
                     <form className='p-3 shadow-lg' style={{ backgroundColor: 'white', borderRadius: '20px' }}>
                         <p className='display-6 text-center text-color'>Give a review about ourself</p>
                         <div className="mb-3">

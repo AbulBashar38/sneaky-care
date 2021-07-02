@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 @media screen and (max-width: 767px) {
-    .dashboard-items{
+    .main-items{
         width: calc(100% - 70px);
         position: absolute;
         left: 70px;
@@ -10,7 +10,7 @@
     }
 }
 @media screen and (max-width: 480px) {
-    .dashboard-items{
+    .main-items{
         width: auto;
     }
 }

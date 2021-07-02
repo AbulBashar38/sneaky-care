@@ -11,7 +11,7 @@ const ShowAppoint = (props) => {
         history.replace('/checkout')
     }
     return (
-        <div className="col-md-4 card-group">
+        <div className="col-md-4 card-group card-container col-sm-6">
             <div className="card p-3">
                 <div className="card-body text-center">
                     <h5 className="card-title text-color">{subject}</h5>

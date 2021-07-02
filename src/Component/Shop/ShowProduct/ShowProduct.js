@@ -12,9 +12,9 @@ const ShowProduct = (props) => {
         history.replace('/checkout')
     }
     return (
-        <div className="col-md-3 card-group mb-3">
+        <div className="col-md-3 card-group mb-3 card-container col-sm-6">
             <div className="card text-center" style={{ width: '18rem' }}>
-                <img src={img} style={{ width: '250px' }} className="card-img-top mx-auto d-block p-3" alt="..." />
+                <img src={img} style={{ width: '250px' }} className="card-img-top mx-auto d-block p-3 img-fluid" alt="..." />
                 <div className="card-body">
                     <h5 className="card-title text-color mb-3">{name}</h5>
                     <div className="row mb-3">
