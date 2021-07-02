@@ -21,7 +21,7 @@ const Sidebar = () => {
             <div className='d-flex flex-column justify-content-between py-5 px-3 text-white text-center' style={{height: '100vh'}}>
                 <div className="logo-container">
                     <div style={openBar===false?{display:'none'}:{display:'block'}} className="logo-name">
-                       <Link to='/home'> Sneaky Care</Link>
+                       <Link className='text-white fw-bolder text-decoration-none' to='/home'> Sneaky Care</Link>
                     </div>
                     <FontAwesomeIcon id='menuBtn' onClick={()=>setOpenBar(!openBar)} icon={faBars} />
                 </div>
