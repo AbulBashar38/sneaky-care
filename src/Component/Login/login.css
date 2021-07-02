@@ -7,3 +7,8 @@
     width: 400px;
     border-radius: 200px;
 }
+@media screen and (max-width: 480px){
+    .btn-google{
+        width: 250px;
+    }
+}

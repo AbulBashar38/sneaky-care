@@ -17,6 +17,7 @@ const Login = () => {
     }
     const [loggedInUser, setLoggedInUser] = useContext(UserContext)
     const [showAdmin, setShowAdmin] = useState(false)
+    const [adminLogin, setAdminLogin] = useState({})
 
     const history = useHistory();
     const location = useLocation();
@@ -40,6 +41,30 @@ const Login = () => {
 
         e.preventDefault()
     }
+    const handleBlur = (e) => {
+        const newAdmin = { ...adminLogin }
+        newAdmin[e.target.name] = e.target.value
+        setAdminLogin(newAdmin)
+    }
+    const handleAdminLogin = (e) => {
+        firebase.auth().signInWithEmailAndPassword(adminLogin.email, adminLogin.password)
+            .then((userCredential) => {
+                var user = userCredential.user;
+                const newUser = {
+                    name: '',
+                    email: user.email,
+                    photo: ''
+                }
+                setLoggedInUser(newUser);
+                history.replace(from)
+            })
+            .catch((error) => {
+                var errorCode = error.code;
+                var errorMessage = error.message;
+                console.log(errorMessage);
+            });
+        e.preventDefault()
+    }
     return (
         <div className='container'>
             <div className="row loginContainer shadow-lg">
@@ -50,14 +75,16 @@ const Login = () => {
                                 <div>
                                     <div className="mb-3">
                                         <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
-                                        <input type="email" className="form-control" />
+                                        <input type="email" className="form-control" name='email' onBlur={handleBlur} />
+                                        <div id="emailHelp" className="form-text">adminemail123@gmail.com</div>
                                     </div>
                                     <div className="mb-3">
                                         <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
-                                        <input type="password" className="form-control" id="exampleInputPassword1" />
+                                        <input type="password" className="form-control" id="exampleInputPassword1" name='password' onBlur={handleBlur} />
+                                        <div id="emailHelp" className="form-text">adminpassword123</div>
                                     </div>
                                     <div className="text-center mb-5">
-                                        <button type="submit" className="btn btn-primary">Admin login</button>
+                                        <button onClick={handleAdminLogin} className="btn btn-primary">Admin login</button>
                                     </div>
                                 </div> :
                                 <p className="display-5 text-center">You have to login with Google</p>
