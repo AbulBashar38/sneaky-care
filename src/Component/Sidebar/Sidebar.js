@@ -13,9 +13,6 @@ const Sidebar = () => {
             .then(res => res.json())
             .then(data => setIsAdmin(data))
     }, [loggedInUser.email])
-    const style ={
-        border:'5px solid red'
-    }
     const handleLogout =()=>{
 
         setLoggedInUser({})
