@@ -3,10 +3,13 @@ import { UserContext } from '../../../App';
 import Header from '../../Shared/Header/Header';
 import { useForm } from "react-hook-form";
 import './Checkout.css'
+import { useHistory } from 'react-router-dom';
 const Checkout = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext)
     const [orderedItem, setOrderedItem] = useState({})
     const { register, handleSubmit,  formState: { errors } } = useForm();
+    const history = useHistory()
+
     useEffect(() => {
         fetch(`https://morning-caverns-13555.herokuapp.com/orderedProduct/${loggedInUser.id}`)
             .then(res => res.json())
@@ -20,7 +23,15 @@ const Checkout = () => {
             body: JSON.stringify(OrderInfo)
         })
         .then(res=>res.json())
-        .then(document=>console.log(document))
+        .then(document=>{
+            if (document) {
+                if (window.confirm(`${orderedItem.name?'Order':'Appointment'} is successful. Go to the Dashboard`)) {
+                    history.replace('/admin')
+                  } else {
+                    history.replace('/home')
+                  }
+            }
+        })
     };
     return (
         <div>

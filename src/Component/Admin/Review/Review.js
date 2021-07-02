@@ -1,10 +1,12 @@
 import React, { useContext, useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import { UserContext } from '../../../App';
 import Sidebar from '../../Sidebar/Sidebar'
 import './Review.css'
 const Review = () => {
     const [loggedInUser,setLoggedInUser]=useContext(UserContext)
     const [testimonial, setTestimonial] = useState({})
+    const history = useHistory()
     const handleBlur = (e) => {
         const testimonialInfo = { ...testimonial}
         testimonialInfo[e.target.name] = e.target.value
@@ -18,7 +20,15 @@ const Review = () => {
             body: JSON.stringify(testimonialData)
         })
         .then(res=>res.json())
-        .then(data=>console.log(data))
+        .then(document=>{
+            if (document) {
+                if (window.confirm(`Thanks for your Comment. Do you want to go Home page`)) {
+                    history.replace('/home')
+                  } else {
+                    history.replace('/admin')
+                  }
+            }
+        })
         e.preventDefault()
     }
     return (

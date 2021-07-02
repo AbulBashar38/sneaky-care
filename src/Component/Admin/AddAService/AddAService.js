@@ -8,7 +8,6 @@ const AddAService = () => {
     const handleBlur = (e) => {
         const newService = { ...serviceInfo };
         newService[e.target.name] = e.target.value;
-        console.log(newService);
         setServiceInfo(newService)
     }
 
@@ -28,7 +27,6 @@ const AddAService = () => {
 
     const addServiceDatabase = (e) => {
         const serviceData ={...serviceInfo,img:imgUrl}
-        console.log(serviceData);
         fetch('https://morning-caverns-13555.herokuapp.com/addAService',{
             method:'POST',
             headers:{'Content-Type':'application/json'},
@@ -36,7 +34,9 @@ const AddAService = () => {
         })
         .then(res=>res.json())
         .then(data=>{
-            console.log(data);
+            if (data) {
+                alert('New service added')
+            }
         })
         e.preventDefault()
     }
