@@ -1,7 +1,7 @@
 # [Live link](https://sneaky-care.web.app/)
 
 
-#### This website is basically made for rural woman. village girls and woman can't buy sanitary napkin or pad easily. so the can buy pad and take appointment from great gynecologist of bangladesh. in the home page you can see main home banner,motive section,services,brands section, doctors,testimonial,contact,footer,
+#### This website is basically made for rural woman. Village girls and woman can't buy sanitary napkin or pad easily. So the can buy pad and take appointment from great gynecologist of bangladesh. In the home page you can see main home banner,motive section,services,brands section, doctors,testimonial,contact,footer.
 
 # Features
 * Form services option you can take apppointment and can buy sanitary napkin and you can also get offers but offer is currently unavailable.
