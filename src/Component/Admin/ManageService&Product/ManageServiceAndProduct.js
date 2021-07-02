@@ -14,7 +14,7 @@ const ManageServiceAndProduct = () => {
             <div className="col-md-2">
                 <Sidebar></Sidebar>
             </div>
-            <div className="col-md-10">
+            <div className="col-md-10 main-items">
                 <p className="display-6 text-color text-center">Services</p>
                 <div className='my-5'>
                     <div className="row">

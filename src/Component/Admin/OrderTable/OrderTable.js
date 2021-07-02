@@ -23,7 +23,7 @@ const OrderTable = () => {
             .then(data => console.log(data))
     }
     return (
-        <div className='table-responsive'>
+        <div className='table-responsive table-responsive-sm table-responsive-md'>
             <table className="table">
                 <thead>
                     <tr>

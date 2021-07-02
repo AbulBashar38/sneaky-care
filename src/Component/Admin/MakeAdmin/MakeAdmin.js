@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Sidebar from '../../Sidebar/Sidebar';
-
+import './MakeAdmin.css'
 const MakeAdmin = () => {
     const [adminEmail,setAdminEmail]=useState({})
     const handleBlur = (e) => {
@@ -25,8 +25,8 @@ const MakeAdmin = () => {
                     <Sidebar></Sidebar>
                 </div>
                 <div className="col-md-10">
-                    <div className='p-5'>
-                        <form className='p-5'>
+                    <div className='main-items'>
+                        <form className='makeAdmin-container'>
                             <div className="mb-3">
                                 <label htmlFor="exampleInputEmail1" className="form-label fw-bold text-color">Admin email</label>
                                 <input type="email" className="form-control w-75" id="exampleInputEmail1" onBlur={handleBlur} name='adminEmail' />

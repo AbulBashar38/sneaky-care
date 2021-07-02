@@ -1,7 +1,7 @@
 import React from 'react';
 import Sidebar from '../../Sidebar/Sidebar';
 import OrderTable from '../OrderTable/OrderTable';
-
+import './AllOrder.css'
 const AllOrder = () => {
 
     return (
@@ -12,7 +12,10 @@ const AllOrder = () => {
             <div className="col-md-10">
                 <div className="main-items">
                     <div className="display-6 text-center">All Orders and Appointments</div>
-                    <OrderTable></OrderTable>
+                    <div className='orderTable'>
+                        <OrderTable></OrderTable>
+                    </div>
+
                 </div>
             </div>
         </div>

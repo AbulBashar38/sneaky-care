@@ -10,8 +10,8 @@ const ManageService = (props) => {
         .then(data=>console.log(data))
     }
     return (
-        <div className="col-md-4 card-group">
-            <div className="card text-center" style={{ width: '18rem' }}>
+        <div className="col-md-4 col-sm-6 card-group card-container">
+            <div className="card text-center admin-card">
                 <div className="card-body">
                     <h5 className="card-title text-color2 mb-3">{serviceTitle}</h5>
                     <p className="card-text">{serviceDescription}</p>
