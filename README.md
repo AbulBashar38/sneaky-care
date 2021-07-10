@@ -8,6 +8,7 @@
 * if you click buy btn of any product in shop then you can see checkout page and confirem your order.
 * You can't go any pages without authenticate so you have to authenticate with google
 * In the admin panel for general users the can get access of **Dashboard**, **Shop**, **Appointment**, and **Review**
+* Responsive and Animated Sidebar
 * But if you are an **Admin** then you can see all Option.
 * An admin can remove somthig,can add add something like services, product, offer, and can update the current state of order.
 * Its an full responsive website
