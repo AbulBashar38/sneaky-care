@@ -14,7 +14,7 @@ const Review = () => {
     }
     const addServiceDatabase = (e) => {
         const testimonialData ={...testimonial,img:loggedInUser.photo}
-        fetch('https://morning-caverns-13555.herokuapp.com/addTestimonial',{
+        fetch('https://sneaky-care-server.onrender.com/addTestimonial',{
             method:'POST',
             headers:{'Content-Type':'application/json'},
             body: JSON.stringify(testimonialData)

@@ -9,7 +9,7 @@ const Sidebar = () => {
     const [openBar, setOpenBar] = useState(false)
     const [loggedInUser, setLoggedInUser] = useContext(UserContext)
     useEffect(() => {
-        fetch('https://morning-caverns-13555.herokuapp.com/checkAdmin?email=' + loggedInUser.email)
+        fetch('https://sneaky-care-server.onrender.com/checkAdmin?email=' + loggedInUser.email)
             .then(res => res.json())
             .then(data => setIsAdmin(data))
     }, [loggedInUser.email])

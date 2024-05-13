@@ -11,13 +11,13 @@ const Checkout = () => {
     const history = useHistory()
 
     useEffect(() => {
-        fetch(`https://morning-caverns-13555.herokuapp.com/orderedProduct/${loggedInUser.id}`)
+        fetch(`https://sneaky-care-server.onrender.com/orderedProduct/${loggedInUser.id}`)
             .then(res => res.json())
             .then(data => setOrderedItem(data))
     }, [loggedInUser.id])
     const onSubmit = data => {
         const OrderInfo = { ...data,brand:orderedItem.name?loggedInUser.brand:'', date: new Date(), status: "Pending",type:orderedItem.name?'pad':'appointment' }
-        fetch(orderedItem.name?'https://morning-caverns-13555.herokuapp.com/addOrder':' https://morning-caverns-13555.herokuapp.com/addAppointment', {
+        fetch(orderedItem.name?'https://sneaky-care-server.onrender.com/addOrder':' https://sneaky-care-server.onrender.com/addAppointment', {
             method: 'POST',
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(OrderInfo)

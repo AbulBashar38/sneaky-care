@@ -25,7 +25,7 @@ const AddAProduct = () => {
     }
     const addProductDatabase = (e) => {
         const productData ={...productInfo,img:productImg}
-        fetch('https://morning-caverns-13555.herokuapp.com/addAProduct',{
+        fetch('https://sneaky-care-server.onrender.com/addAProduct',{
             method:'POST',
             headers:{'Content-Type':'application/json'},
             body: JSON.stringify(productData)

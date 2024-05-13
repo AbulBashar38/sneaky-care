@@ -4,7 +4,7 @@ import ShowProduct from '../ShowProduct/ShowProduct';
 const ShopMain = () => {
     const [allProducts,setAllProducts]=useState([])
     useState(()=>{
-        fetch('https://morning-caverns-13555.herokuapp.com/getAllProducts')
+        fetch('https://sneaky-care-server.onrender.com/getAllProducts')
         .then(res=>res.json())
         .then(data=>setAllProducts(data))
     },[])

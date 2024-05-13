@@ -5,7 +5,7 @@ import ManageService from '../ManageService/ManageService';
 const ManageServiceAndProduct = () => {
     const [servicesData, setServiceData] = useState([])
     useEffect(() => {
-        fetch('https://morning-caverns-13555.herokuapp.com/getServices')
+        fetch('https://sneaky-care-server.onrender.com/getServices')
             .then(res => res.json())
             .then(data => setServiceData(data))
     }, [])

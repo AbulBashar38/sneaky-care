@@ -9,12 +9,12 @@ const Dashboard = () => {
     const [allAppointments, setAllAppointments] = useState([])
     const [loggedInUser, setLoggedInUser] = useContext(UserContext)
     useEffect(() => {
-        fetch(`https://morning-caverns-13555.herokuapp.com/getOrder?email=${loggedInUser.email}`)
+        fetch(`https://sneaky-care-server.onrender.com/getOrder?email=${loggedInUser.email}`)
             .then(res => res.json())
             .then(data => setAllOrders(data))
     }, [loggedInUser.email])
     useEffect(() => {
-        fetch(` https://morning-caverns-13555.herokuapp.com/getAppointment?email=${loggedInUser.email}`)
+        fetch(` https://sneaky-care-server.onrender.com/getAppointment?email=${loggedInUser.email}`)
             .then(res => res.json())
             .then(data => setAllAppointments(data))
     }, [loggedInUser.email])

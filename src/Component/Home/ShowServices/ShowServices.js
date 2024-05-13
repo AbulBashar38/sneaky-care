@@ -9,7 +9,7 @@ const ShowServices = (props) => {
             history.replace('/shop')
         }
         if (serviceBtn==='Take Appointment') {
-            history.replace('/appointment')
+            history.replace('/checkout')
         }
         if (serviceBtn==='Check Offer') {
             history.replace('/offer')

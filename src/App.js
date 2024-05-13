@@ -1,69 +1,65 @@
-import './App.css';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-} from "react-router-dom";
-import Home from './Component/Home/Home/Home';
-import Shop from './Component/Shop/Shop/Shop';
-import Login from './Component/Login/Login';
-import { createContext, useState } from 'react';
-import PrivateRoute from './Component/PrivateRoute/PrivateRoute';
-import AddServiceAndOffer from './Component/Admin/AddServiceAndOffer/AddServiceAndOffer';
-import Review from './Component/Admin/Review/Review';
-import MakeAdmin from './Component/Admin/MakeAdmin/MakeAdmin';
-import Dashboard from './Component/Admin/Dashboard/Dashboard';
-import Checkout from './Component/Shop/Checkout/Checkout';
-import AllOrder from './Component/Admin/AllOrder/AllOrder';
-import ManageServiceAndProduct from './Component/Admin/ManageService&Product/ManageServiceAndProduct';
-import Appointment from './Component/Appointment/Appointment/Appointment';
-import Offers from './Component/Offers/Offers/Offers'
+import "./App.css";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Home from "./Component/Home/Home/Home";
+import Shop from "./Component/Shop/Shop/Shop";
+import Login from "./Component/Login/Login";
+import { createContext, useState } from "react";
+import PrivateRoute from "./Component/PrivateRoute/PrivateRoute";
+import AddServiceAndOffer from "./Component/Admin/AddServiceAndOffer/AddServiceAndOffer";
+import Review from "./Component/Admin/Review/Review";
+import MakeAdmin from "./Component/Admin/MakeAdmin/MakeAdmin";
+import Dashboard from "./Component/Admin/Dashboard/Dashboard";
+import Checkout from "./Component/Shop/Checkout/Checkout";
+import AllOrder from "./Component/Admin/AllOrder/AllOrder";
+import ManageServiceAndProduct from "./Component/Admin/ManageService&Product/ManageServiceAndProduct";
+import Appointment from "./Component/Appointment/Appointment/Appointment";
+import Offers from "./Component/Offers/Offers/Offers";
 
-export const UserContext = createContext()
+export const UserContext = createContext();
 
 function App() {
-  const [loggedInUser, setLoggedInUser] = useState({})
+  const [loggedInUser, setLoggedInUser] = useState({});
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
       <Router>
         <Switch>
-          <Route path='/home'>
+          <Route path="/home">
             <Home></Home>
           </Route>
-          <Route path='/login'>
+          <Route path="/login">
             <Login></Login>
           </Route>
-          <PrivateRoute path='/shop'>
+          <PrivateRoute path="/shop">
             <Shop></Shop>
           </PrivateRoute>
-          <PrivateRoute path='/review'>
+          <PrivateRoute path="/review">
             <Review></Review>
           </PrivateRoute>
-          <PrivateRoute path='/makeAdmin'>
+          <PrivateRoute path="/makeAdmin">
             <MakeAdmin></MakeAdmin>
           </PrivateRoute>
-          <PrivateRoute path='/admin'>
+          <PrivateRoute path="/admin">
             <Dashboard></Dashboard>
           </PrivateRoute>
-          <PrivateRoute path='/allOrder'>
+          <PrivateRoute path="/allOrder">
             <AllOrder></AllOrder>
           </PrivateRoute>
-          <PrivateRoute path='/manageService'>
+          <PrivateRoute path="/manageService">
             <ManageServiceAndProduct></ManageServiceAndProduct>
           </PrivateRoute>
-          <PrivateRoute path='/checkout'>
+          <PrivateRoute path="/checkout">
             <Checkout></Checkout>
           </PrivateRoute>
-          <PrivateRoute path='/appointment'>
+          <PrivateRoute path="/appointment">
             <Appointment></Appointment>
           </PrivateRoute>
-          <PrivateRoute path='/offer'>
+          <PrivateRoute path="/offer">
             <Offers></Offers>
           </PrivateRoute>
-          <PrivateRoute path='/addServiceAndOffer'>
+          <PrivateRoute path="/addServiceAndOffer">
             <AddServiceAndOffer></AddServiceAndOffer>
           </PrivateRoute>
-          <Route exact path='/'>
+          <Route exact path="/">
             <Home></Home>
           </Route>
         </Switch>

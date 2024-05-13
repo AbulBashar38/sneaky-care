@@ -4,7 +4,7 @@ const ManageService = (props) => {
     const { serviceDescription, serviceTitle, _id } = props.service;
     const deleteService = () => {
         if (window.confirm(`Do you want to Delete this service?`)) {
-            fetch(`https://morning-caverns-13555.herokuapp.com/deleteService/${_id}`, {
+            fetch(`https://sneaky-care-server.onrender.com/deleteService/${_id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())

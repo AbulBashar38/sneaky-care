@@ -9,7 +9,7 @@ const MakeAdmin = () => {
         setAdminEmail(newAdmin)
     }
     const addNewAdmin =(e)=>{
-        fetch('https://morning-caverns-13555.herokuapp.com/addAAdmin',{
+        fetch('https://sneaky-care-server.onrender.com/addAAdmin',{
             method:'POST',
             headers:{"Content-Type":"application/json"},
             body:JSON.stringify(adminEmail)

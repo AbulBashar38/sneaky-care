@@ -4,7 +4,7 @@ import ShowAppoint from '../ShowAppointment/ShowAppoint';
 const Appointment = () => {
     const [appointments, setAppointments] = useState([])
     useEffect(() => {
-        fetch(' https://morning-caverns-13555.herokuapp.com/appointments')
+        fetch(' https://sneaky-care-server.onrender.com/appointments')
             .then(res => res.json())
             .then(data => setAppointments(data))
     }, [])

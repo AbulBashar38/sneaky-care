@@ -4,17 +4,17 @@ const OrderTable = () => {
     const [allAppointment, setAllAppointment] = useState([])
     const [currentStatus, setCurrentStatus] = useState(null)
     useEffect(() => {
-        fetch('https://morning-caverns-13555.herokuapp.com/allOrders')
+        fetch('https://sneaky-care-server.onrender.com/allOrders')
             .then(res => res.json())
             .then(data => setAllOrders(data))
     }, [])
     useEffect(() => {
-        fetch('https://morning-caverns-13555.herokuapp.com/bookingAppointment')
+        fetch('https://sneaky-care-server.onrender.com/bookingAppointment')
             .then(res => res.json())
             .then(data => setAllAppointment(data))
     }, [])
     const updateStatus = () => {
-        fetch(`https://morning-caverns-13555.herokuapp.com/updateStatus/${currentStatus.statusId}`, {
+        fetch(`https://sneaky-care-server.onrender.com/updateStatus/${currentStatus.statusId}`, {
             method: "PATCH",
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ newStatus: currentStatus.selectedStatus })

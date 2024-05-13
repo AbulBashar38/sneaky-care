@@ -27,7 +27,7 @@ const AddAService = () => {
 
     const addServiceDatabase = (e) => {
         const serviceData ={...serviceInfo,img:imgUrl}
-        fetch('https://morning-caverns-13555.herokuapp.com/addAService',{
+        fetch('https://sneaky-care-server.onrender.com/addAService',{
             method:'POST',
             headers:{'Content-Type':'application/json'},
             body: JSON.stringify(serviceData)
